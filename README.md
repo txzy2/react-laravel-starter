@@ -25,3 +25,6 @@ yarn build
 ```bash
 php artisan serve
 ```
+
+## upd:
+Не забудь про миграции :)
