@@ -1,7 +1,7 @@
 import React from 'react';
 import {Loader} from 'lucide-react';
 
-import {FadeIn, Hover} from '@/shared/animations';
+import {FadeIn, Hover, UpToDownAnimate} from '@/shared/animations';
 
 interface LoaderProps {
   iconSize?: number;

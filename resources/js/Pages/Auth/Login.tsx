@@ -8,6 +8,7 @@ import {
 import GuestLayout from '@/Layouts/GuestLayout';
 import {Head, Link, useForm} from '@inertiajs/react';
 import React from 'react';
+import {Hover} from '@/shared/animations';
 
 const Login: React.FC = ({
   status,
@@ -42,16 +43,18 @@ const Login: React.FC = ({
         <div>
           <InputLabel value='Email' children={''} />
 
-          <TextInput
-            id='email'
-            type='email'
-            name='email'
-            value={data.email}
-            className='mt-1 block w-full'
-            autoComplete='username'
-            isFocused={true}
-            onChange={e => setData('email', e.target.value)}
-          />
+          <Hover scale={1.02}>
+            <TextInput
+              id='email'
+              type='email'
+              name='email'
+              value={data.email}
+              className='mt-1 block w-full'
+              autoComplete='username'
+              isFocused={true}
+              onChange={e => setData('email', e.target.value)}
+            />
+          </Hover>
 
           <InputError message={errors.email} className='mt-2' />
         </div>
@@ -59,15 +62,17 @@ const Login: React.FC = ({
         <div className='mt-4'>
           <InputLabel value='Password' children={''} />
 
-          <TextInput
-            id='password'
-            type='password'
-            name='password'
-            value={data.password}
-            className='mt-1 block w-full'
-            autoComplete='current-password'
-            onChange={e => setData('password', e.target.value)}
-          />
+          <Hover scale={1.02}>
+            <TextInput
+              id='password'
+              type='password'
+              name='password'
+              value={data.password}
+              className='mt-1 block w-full'
+              autoComplete='current-password'
+              onChange={e => setData('password', e.target.value)}
+            />
+          </Hover>
 
           <InputError message={errors.password} className='mt-2' />
         </div>
@@ -93,9 +98,11 @@ const Login: React.FC = ({
             </Link>
           )}
 
-          <PrimaryButton className='ms-4' disabled={processing}>
-            Log in
-          </PrimaryButton>
+          <Hover>
+            <PrimaryButton className='ms-4' disabled={processing}>
+              Log in
+            </PrimaryButton>
+          </Hover>
         </div>
       </form>
     </GuestLayout>
