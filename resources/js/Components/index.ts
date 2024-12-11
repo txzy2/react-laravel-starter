@@ -1,1 +1,1 @@
-export {default as MainTable} from './MainTable';
+export {default as MainTable} from './main/MainTable';
